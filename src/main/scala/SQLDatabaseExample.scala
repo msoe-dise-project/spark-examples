@@ -21,12 +21,14 @@ object SQLDatabaseExample {
     // by providing an encoder
     import spark.implicits._
 
+    // database connection details
     val url = "jdbc:postgresql://127.0.0.1:5432/spam_classification"
     val tableName = "labeled_emails"
     val props = new Properties()
     props.setProperty("user", "postgres")
     props.setProperty("password", "admin")
 
+    // read table into DataFrame
     val tableDf = spark.read
       .jdbc(url, tableName, props)
 
