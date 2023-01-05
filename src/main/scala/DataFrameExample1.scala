@@ -4,7 +4,7 @@ import org.apache.spark.sql.SparkSession
 // transactions as a DataFrame and uses the
 // DataFrame API to remove outlier records
 // The output is written in parquet format
-object DataFrameExample {
+object DataFrameExample1 {
   // Same definition of main as in Java
   // Takes an Array of strings and returns nothing (Unit)
   def main(args: Array[String]): Unit = {
