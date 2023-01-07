@@ -36,6 +36,10 @@ object SQLDatabaseExample {
 
     tableDf.show()
 
+    val count = tableDf.count();
+
+    println(s"There are ${count} rows")
+
     spark.stop()
 
   }
