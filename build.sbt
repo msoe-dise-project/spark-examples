@@ -17,3 +17,6 @@ libraryDependencies += "org.postgresql" % "postgresql" % "42.5.1"
 libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "3.3.2"
 libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "3.3.2"
 libraryDependencies += "org.apache.hadoop" % "hadoop-aws" % "3.3.2"
+
+// sqlite
+libraryDependencies += "org.xerial" % "sqlite-jdbc" % "3.40.0.0"
