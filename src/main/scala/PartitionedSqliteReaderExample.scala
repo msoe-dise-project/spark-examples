@@ -47,10 +47,8 @@ object PartitionedSqliteReaderExample {
     val metaData = rs.getMetaData()
 
     val nColumns = metaData.getColumnCount
-
-    val columnDescriptions: ListBuffer[StructField] = ListBuffer()
-
-    for (idx <- 1 to nColumns) {
+    
+    val columnDescriptions = (1 to nColumns).map { idx =>
       val columnName = metaData.getColumnName(idx)
       val isNullable = metaData.isNullable(idx) == ResultSetMetaData.columnNullable
       val sparkType: DataType = metaData.getColumnType(idx) match {
@@ -63,7 +61,7 @@ object PartitionedSqliteReaderExample {
         case Types.TIME => TimestampType
         case _ => StringType
       }
-      columnDescriptions += StructField(columnName, sparkType, isNullable)
+      StructField(columnName, sparkType, isNullable)
     }
 
     val schemaStruct = StructType(columnDescriptions.toArray)
