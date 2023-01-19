@@ -14,6 +14,6 @@ libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.3.1"
 libraryDependencies += "org.postgresql" % "postgresql" % "42.5.1"
 
 // for minio
-libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "3.3.4"
-libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "3.3.4"
-libraryDependencies += "org.apache.hadoop" % "hadoop-aws" % "3.3.4"
+libraryDependencies += "org.apache.hadoop" % "hadoop-common" % "3.3.2"
+libraryDependencies += "org.apache.hadoop" % "hadoop-client" % "3.3.2"
+libraryDependencies += "org.apache.hadoop" % "hadoop-aws" % "3.3.2"
