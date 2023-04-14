@@ -16,6 +16,9 @@ object DatasetExample2 {
       .appName("DatasetExample")
       .getOrCreate()
 
+    // disable INFO log output from this point forward
+    spark.sparkContext.setLogLevel("ERROR")
+
     // this is needed to allow the map function below
     // by providing an encoder
     import spark.implicits._
